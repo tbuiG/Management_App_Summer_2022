@@ -23,6 +23,7 @@ public class About extends JFrame implements ActionListener {
 	private JTextField textField;
 	private JTextField textField_1;
 	private JTable table;
+	private JButton btnNewButton_1;
 	
 	About() {
 		this.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
@@ -99,11 +100,20 @@ public class About extends JFrame implements ActionListener {
 		lblNewLabel_5.setFont(new Font("Segoe UI", Font.BOLD, 14));
 		lblNewLabel_5.setBounds(360, 341, 79, 14);
 		contentPane.add(lblNewLabel_5);
+		
+		btnNewButton_1 = new JButton("Resource Tracker");
+		btnNewButton_1.setFont(new Font("Segoe UI", Font.BOLD, 14));
+		btnNewButton_1.setBounds(94, 536, 288, 40);
+		btnNewButton_1.addActionListener(this);
+		contentPane.add(btnNewButton_1);
 	}
 
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		// TODO Auto-generated method stub
-		
+		if(e.getSource() == btnNewButton_1) {
+			new ExpendedHourTracker();
+			
+		}
 	}
 }
